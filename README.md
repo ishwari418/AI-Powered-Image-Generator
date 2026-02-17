@@ -1,149 +1,139 @@
-🖼️ AI-Powered Image Generator
+# 🖼️ AI-Powered Image Generator
 
-A lightweight, cloud-based text-to-image generation web application that allows users to create high-quality AI images from natural language prompts — without requiring a local GPU.
+A lightweight, cloud-based **text-to-image generation web application** that allows users to generate high-quality AI images from text prompts without requiring a local GPU.
 
-📌 Project Overview
+---
 
-AI-Powered Image Generator leverages cloud-hosted Stable Diffusion models to generate images from text prompts in real time.
-All heavy computation is offloaded to the cloud, making the system fast, accessible, and easy to use on any machine.
+## 📌 Project Overview
 
-Key Highlights
+**AI-Powered Image Generator** leverages cloud-hosted Stable Diffusion models to generate images in real time.  
+All heavy computation is handled remotely, making the system fast, accessible, and easy to use on any machine.
 
-✅ No local GPU required (cloud-based inference)
+### Key Highlights
+- No local GPU required (cloud-based inference)
+- Clean and simple UI built with Streamlit
+- Fast image generation (typically under 5 seconds)
+- Supports styles, negative prompts, and seed values
+- Minimal setup (Python 3.8+ only)
 
-✅ Clean and simple UI built with Streamlit
+---
 
-✅ Fast image generation (typically under 5 seconds)
+## ⚙️ How It Works
 
-✅ Supports styles, negative prompts, and seed values
+### Architecture Flow
 
-✅ Minimal setup (Python 3.8+ only)
-
-⚙️ How It Works
-Architecture Flow
 User Input (Web UI)
-        ↓
+↓
 app.py (Streamlit Interface)
-        ↓
+↓
 generator.py (API Handler)
-        ↓
+↓
 Pollinations.ai API
-        ↓
+↓
 Stable Diffusion (Cloud GPU)
-        ↓
+↓
 Generated Image
-        ↓
+↓
 Displayed & Downloaded in UI
 
-Execution Flow
 
-User enters a prompt and optional parameters
+### Execution Steps
+- User enters a text prompt and optional parameters
+- Input is processed and validated
+- Request is sent to Pollinations.ai API
+- Stable Diffusion runs on remote GPUs
+- Image is generated and returned
+- Result is displayed and downloadable
 
-Input is validated and processed
+---
 
-Request is sent to Pollinations.ai API
+## 🧠 Technology Stack
 
-Stable Diffusion runs on remote GPUs
+| Component | Technology | Purpose |
+|--------|-----------|--------|
+| Language | Python 3.8+ | Core application logic |
+| Web UI | Streamlit | Interactive frontend |
+| API Calls | Requests | Communication with Pollinations.ai |
+| Image Handling | Pillow (PIL) | Image processing |
+| AI Model | Stable Diffusion | Image generation |
+| Execution | Cloud-based | No local inference |
 
-Generated image is returned
+---
 
-Image is displayed and made downloadable
+## 📁 Project Structure
 
-🧠 Technology Stack
-Component	Technology	Purpose
-Language	Python 3.8+	Core application logic
-Web UI	Streamlit	Interactive frontend
-API Calls	Requests	Communication with Pollinations.ai
-Image Handling	Pillow (PIL)	Image processing
-AI Model	Stable Diffusion	Image generation
-Execution	Cloud-based	No local inference
-📁 Project Structure
 AI-Powered-Image-Generator/
-│
-├── app.py               # Streamlit UI & application entry point
-├── generator.py         # API handling & image generation logic
-├── utils.py             # Helper utilities
-├── requirements.txt     # Python dependencies
-├── Screenshot (46).png  # UI preview
-└── README.md            # Documentation
+├── app.py
+├── generator.py
+├── utils.py
+├── requirements.txt
+├── Screenshot (46).png
+└── README.md
 
-File Responsibilities
-app.py
 
-Builds the Streamlit interface
+### File Descriptions
 
-Handles user inputs (prompt, style, seed)
+#### app.py
+- Builds the Streamlit interface
+- Handles user inputs (prompt, style, seed)
+- Triggers image generation
+- Displays and enables image downloads
 
-Triggers image generation
+#### generator.py
+- Communicates with Pollinations.ai API
+- Constructs API requests
+- Handles responses and errors
+- Returns generated image data
 
-Displays and enables image downloads
+#### utils.py
+- Input validation helpers
+- Image processing and saving
+- Common utility functions
 
-generator.py
+---
 
-Communicates with Pollinations.ai API
+## 📦 Dependencies & Installation
 
-Constructs API requests
+### Prerequisites
+- Python 3.8 or higher
+- pip package manager
+- Active internet connection
 
-Handles responses and errors
+### Installation
 
-Returns generated image data
-
-utils.py
-
-Input validation helpers
-
-Image handling and saving
-
-Common utility functions
-
-📦 Dependencies & Installation
-Prerequisites
-
-Python 3.8+
-
-pip package manager
-
-Active internet connection
-
-Installation
+```bash
 git clone https://github.com/ishwari418/AI-Powered-Image-Generator.git
 cd AI-Powered-Image-Generator
 pip install -r requirements.txt
 
-Run the App
+**### Run the Application**
 streamlit run app.py
 
+Access the app at:
+http://localhost:8501
 
-Access the application at:
-👉 http://localhost:8501
+** System Requirements**
+| Requirement | Specification         |
+| ----------- | --------------------- |
+| CPU         | Any modern processor  |
+| GPU         | Not required          |
+| RAM         | 4 GB or more          |
+| Storage     | Less than 100 MB      |
+| OS          | Windows, macOS, Linux |
+| Internet    | Required              |
 
-💻 System Requirements
-Requirement	Specification
-CPU	Any modern processor
-GPU	❌ Not required
-RAM	4 GB or more
-Storage	< 100 MB
-OS	Windows / macOS / Linux
-Internet	Required
-🎨 Usage Guide
-
+** Usage Guide**
 Launch the application
-
-Enter an image description
-
+Enter an image prompt
 Example:
 
 A futuristic city at sunset with flying cars
 
-
 Select a style (optional)
 
 Add a negative prompt (optional)
-
 Example:
-
 blurry, low quality, distorted
-
 
 Set a seed (optional)
 
@@ -151,72 +141,9 @@ Click Generate Image
 
 Download the result
 
-🧪 Prompt Engineering Tips
-Prompt Formula
-[Subject] + [Medium] + [Lighting] + [Quality Keywords]
-
-Examples
-Quality	Prompt
-Basic	A dog
-Better	A golden retriever puppy playing in the park
-Best	A golden retriever puppy playing in a sunny park, cinematic lighting, highly detailed, 8k, photorealistic
-⚠️ Limitations
-Limitation	Description
-Internet Required	Cannot run offline
-API Latency	Depends on server load
-Limited Controls	Less granular than local SD
-Rate Limits	Subject to API policies
-Resolution	Fixed (usually 512×512)
-🚀 Future Roadmap
-Short-Term
-
-User authentication
-
-Image gallery
-
-Batch generation
-
-More styles
-
-Mid-Term
-
-Image upscaling
-
-In-painting
-
-Style transfer
-
-Long-Term
-
-Multiple AI models
-
-Custom model fine-tuning
-
-REST API backend
-
-Mobile app
-
-📊 Project Snapshot
-Language: Python
-Core Files: 3
-Dependencies: 3
-Setup Time: ~5 minutes
-First Run: < 30 seconds
-GPU Required: No
-
-📞 Contact & Support
-
-🐛 Issues: GitHub Issues
-
-💬 Discussions: GitHub Discussions
-
-📧 Contact: Via GitHub profile
-
-⚡ Quick Start
+**Quick Start**
 pip install -r requirements.txt
 streamlit run app.py
 
-
 Example Prompt:
-
 A cyberpunk warrior in a neon-lit city, ultra-detailed, 8k, photorealistic
