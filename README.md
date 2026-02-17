@@ -37,7 +37,7 @@ Generated Image
 Displayed & Downloaded in UI
 
 
-### Execution Steps
+### Execution Steps  
 - User enters a text prompt and optional parameters
 - Input is processed and validated
 - Request is sent to Pollinations.ai API
@@ -100,19 +100,18 @@ AI-Powered-Image-Generator/
 - Active internet connection
 
 ### Installation
-
 ```bash
 git clone https://github.com/ishwari418/AI-Powered-Image-Generator.git
 cd AI-Powered-Image-Generator
 pip install -r requirements.txt
 
-**### Run the Application**
+ **Run the Application**
 streamlit run app.py
 
 Access the app at:
 http://localhost:8501
 
-** System Requirements**
+**System Requirements**
 | Requirement | Specification         |
 | ----------- | --------------------- |
 | CPU         | Any modern processor  |
@@ -122,7 +121,7 @@ http://localhost:8501
 | OS          | Windows, macOS, Linux |
 | Internet    | Required              |
 
-** Usage Guide**
+**Usage Guide**
 Launch the application
 Enter an image prompt
 Example:
@@ -147,3 +146,4 @@ streamlit run app.py
 
 Example Prompt:
 A cyberpunk warrior in a neon-lit city, ultra-detailed, 8k, photorealistic
+
