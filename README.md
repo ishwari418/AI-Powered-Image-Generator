@@ -1,10 +1,10 @@
-# 🖼️ AI-Powered Image Generator
+#  AI-Powered Image Generator
 
 A lightweight, cloud-based **text-to-image generation web application** that allows users to generate high-quality AI images from text prompts without requiring a local GPU.
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 **AI-Powered Image Generator** leverages cloud-hosted Stable Diffusion models to generate images in real time.  
 All heavy computation is handled remotely, making the system fast, accessible, and easy to use on any machine.
@@ -18,7 +18,7 @@ All heavy computation is handled remotely, making the system fast, accessible, a
 
 ---
 
-## ⚙️ How It Works
+##  How It Works
 
 ### Architecture Flow
 
@@ -47,7 +47,7 @@ Displayed & Downloaded in UI
 
 ---
 
-## 🧠 Technology Stack
+##  Technology Stack
 
 | Component | Technology | Purpose |
 |--------|-----------|--------|
@@ -60,7 +60,7 @@ Displayed & Downloaded in UI
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 AI-Powered-Image-Generator/
 ├── app.py
@@ -92,7 +92,7 @@ AI-Powered-Image-Generator/
 
 ---
 
-## 📦 Dependencies & Installation
+##  Dependencies & Installation
 
 ### Prerequisites
 - Python 3.8 or higher
